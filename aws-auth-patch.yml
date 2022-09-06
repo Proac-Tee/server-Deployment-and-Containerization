@@ -1,18 +1,11 @@
-# This is a sample aws-auth-patch.yml file.
-# Actual aws-auth-patch.yml will be created at /System/Volumes/Data/private/tmp/aws-auth-patch.yml path.
-
 apiVersion: v1
 data:
   mapRoles: |
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::156897219603:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1DBHED9TMYRZZ
+      rolearn: arn:aws:iam::156897219603:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-127MJA3AI4D4T
       username: system:node:{{EC2PrivateDNSName}}
-      - system:masters
-      rolearn: arn:aws:iam::156897219603:role/UdacityFlaskDeployCBKubectlRole
-      username: build
-    - groups:
       - system:masters
       rolearn: arn:aws:iam::156897219603:role/UdacityFlaskDeployCBKubectlRole
       username: build
